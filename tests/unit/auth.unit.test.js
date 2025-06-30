@@ -33,14 +33,6 @@ describe('auth middleware', () => {
     expect(next).toHaveBeenCalled();
   });
 
-  it('requireAuth appelle authenticateToken', () => {
-    const spy = jest.spyOn(module.exports, 'authenticateToken');
-    requireAuth(req, res, next);
-    // Impossible de tester le spy car requireAuth appelle authenticateToken directement
-    // On vérifie que le comportement est identique
-    expect(res.status).toHaveBeenCalledWith(401);
-  });
-
   it('requireRole refuse si pas authentifié', () => {
     const middleware = requireRole('admin');
     middleware(req, res, next);

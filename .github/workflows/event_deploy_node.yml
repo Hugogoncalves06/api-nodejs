@@ -1,4 +1,4 @@
-name: Build, Test, and Deploy Node.js API
+name: Event Deploy Node.js API
 
 on:
   repository_dispatch:

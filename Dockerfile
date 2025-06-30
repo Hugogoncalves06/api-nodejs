@@ -16,11 +16,11 @@ COPY . .
 RUN mkdir -p logs
 
 # Exposer le port
-EXPOSE 3000
+EXPOSE 8000
 
 # Définir les variables d'environnement par défaut
 ENV NODE_ENV=production
-ENV PORT=3000
+ENV PORT=8000
 
 # Commande de démarrage
 CMD ["npm", "start"] 
